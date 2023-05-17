@@ -1,41 +1,87 @@
 import React, { useEffect, useState } from 'react';
 import { getAuth } from 'firebase/auth';
+import usersData from '../../Data/Users.json';
+import Sidebar from '../Sidebar/Sidebar';
+import './SCSS/Home.css';
+import Navbar from '../Navbar/Navbar';
 
 const Home = ({ logout }) => {
   const [user, setUser] = useState(null);
-  const auth = getAuth(); // Initialize the authentication instance
+  const auth = getAuth();
 
   useEffect(() => {
-    // Listen for changes in the authentication state
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
         // User is signed in
         setUser(user);
+        saveUser(user);
       } else {
         // User is signed out
         setUser(null);
       }
     });
 
-    // Clean up the subscription when the component unmounts
     return () => unsubscribe();
-  });
+  }, []);
 
   const handleLogout = () => {
     logout();
   };
 
+  const userEmail = user?.email;
+  const userName = user?.displayName;
+  const userImage = user?.photoURL;
+
+  const saveUser = (user) => {
+    const newUser = {
+      id: user.uid,
+      name: user.displayName,
+      imageUrl: user.photoURL,
+    };
+
+    const existingUser = usersData.find((existingUser) => existingUser.id === newUser.id);
+
+    if (!existingUser) {
+      usersData.push(newUser);
+    }
+  };
+
   return (
-    <div>
-      <h1>Welcome to the Home component!</h1>
-      {user && (
-        <div>
-          <p>Name: {user.displayName}</p>
-          <p>Email: {user.email}</p>
-          <p>Profile Picture: <img src={user.photoURL} alt="Profile" /></p>
+    <div className='home'>
+      <Sidebar />
+
+      <div className="main">
+        <Navbar userEmail={userEmail} userName={userName} userImage={userImage} />
+      
+        <div className="card-container">
+          <div className="card">
+            <p>Total Revenues</p>
+            <p>$2,129,430</p>
+            <i class="fad fa-money-bill"></i>
+          </div>
+
+          <div className="card">
+            <p>Total Revenues</p>
+            <p>$2,129,430</p>
+            <i class="far fa-tags"></i>
+          </div>
+
+          <div className="card">
+            <p>Total Revenues</p>
+            <p>$2,129,430</p>
+            <i class="fas fa-thumbs-up"></i>
+          </div>
+
+          <div className="card">
+            <p>Total Revenues</p>
+            <p>$2,129,430</p>
+            <i class="far fa-user-friends"></i>
+          </div>
         </div>
-      )}
-      <button onClick={handleLogout}>Logout</button>
+
+      </div>
+
+
     </div>
   );
 };

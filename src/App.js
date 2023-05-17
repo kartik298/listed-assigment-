@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Login from './Components/Login/login';
+import Login from './Components/Login/Login';
 import Home from './Components/Home/Home';
 
 const App = () => {
