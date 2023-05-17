@@ -8,7 +8,9 @@ import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 const firebaseConfig = {
   apiKey: "AIzaSyBGnqwsY-hjaNQi9AomheVARiJ5IoCvyRw",
 
-  authDomain: "listedassignment-62fcf.firebaseapp.com",
+  // authDomain: "listedassignment-62fcf.firebaseapp.com",
+
+  authDomain: "listedassignment.onrender.com ",
 
   projectId: "listedassignment-62fcf",
 
