@@ -1,4 +1,4 @@
-const Navbar = ({ userEmail, userName, userImage })=>{
+const Navbar = ({ userEmail, userName, userImage, logout})=>{
     return(
         <div className="navbar">
               <div className="left">
@@ -14,7 +14,7 @@ const Navbar = ({ userEmail, userName, userImage })=>{
                   <i class="far fa-bell"></i>
                 </div>
 
-                <div className="user">
+                <div className="user" onClick={logout}>
                   <img src={userImage} alt={userName} />
                 </div>
               </div>

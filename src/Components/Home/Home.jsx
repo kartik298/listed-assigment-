@@ -22,7 +22,7 @@ const Home = ({ logout }) => {
     });
 
     return () => unsubscribe();
-  }, []);
+  }, [auth]);
 
   const handleLogout = () => {
     logout();
@@ -34,9 +34,9 @@ const Home = ({ logout }) => {
 
   const saveUser = (user) => {
     const newUser = {
-      id: user.uid,
-      name: user.displayName,
-      imageUrl: user.photoURL,
+      id: user?.uid,
+      name: user?.displayName,
+      imageUrl: user?.photoURL,
     };
 
     const existingUser = usersData.find((existingUser) => existingUser.id === newUser.id);
@@ -51,37 +51,35 @@ const Home = ({ logout }) => {
       <Sidebar />
 
       <div className="main">
-        <Navbar userEmail={userEmail} userName={userName} userImage={userImage} />
+        <Navbar logout={handleLogout} userEmail={userEmail} userName={userName} userImage={userImage} />
       
         <div className="card-container">
           <div className="card">
             <p>Total Revenues</p>
             <p>$2,129,430</p>
-            <i class="fad fa-money-bill"></i>
+            <i className="fad fa-money-bill"></i>
           </div>
 
           <div className="card">
             <p>Total Revenues</p>
             <p>$2,129,430</p>
-            <i class="far fa-tags"></i>
+            <i className="far fa-tags"></i>
           </div>
 
           <div className="card">
             <p>Total Revenues</p>
             <p>$2,129,430</p>
-            <i class="fas fa-thumbs-up"></i>
+            <i className="fas fa-thumbs-up"></i>
           </div>
 
           <div className="card">
             <p>Total Revenues</p>
             <p>$2,129,430</p>
-            <i class="far fa-user-friends"></i>
+            <i className="far fa-user-friends"></i>
           </div>
         </div>
 
       </div>
-
-
     </div>
   );
 };
