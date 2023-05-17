@@ -19,7 +19,7 @@ const Home = ({ logout }) => {
 
     // Clean up the subscription when the component unmounts
     return () => unsubscribe();
-  }, []);
+  });
 
   const handleLogout = () => {
     logout();
