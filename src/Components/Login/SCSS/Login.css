@@ -76,7 +76,7 @@
 .container .card:last-child .login-container form .input-group {
   margin: 14px 0px;
 }
-.container .card:last-child .login-container form .input-group label {
+.container .card:last-child .login-container form .input-group .label {
   display: block;
   margin-bottom: 5px;
   font-family: "Lato";
@@ -92,6 +92,7 @@
   background-color: #EAEAEA;
   border: none;
   border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 7px 0px inset;
 }
 .container .card:last-child .login-container form p {
   font-size: 14px;

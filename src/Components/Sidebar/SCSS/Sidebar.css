@@ -1,1 +1,58 @@
-/*# sourceMappingURL=Sidebar.css.map */
+.sidebar {
+  padding: 10px;
+  width: 15%;
+}
+.sidebar .sidebar-inner {
+  background-color: #000;
+  height: 93vh;
+  color: #fff;
+  border-radius: 22px;
+  padding: 4% 6%;
+  position: relative;
+  padding-left: 40px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+.sidebar .top-nav {
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+}
+.sidebar .top-nav p {
+  color: #ffffff;
+  line-height: 40px;
+  font-family: "Montserrat";
+}
+.sidebar .top-nav p i {
+  padding-right: 3px;
+}
+.sidebar .top-nav p:hover {
+  color: #346bd5;
+  cursor: pointer;
+}
+.sidebar .footer {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  bottom: 1%;
+}
+.sidebar .footer p {
+  color: #cccccc;
+}
+.sidebar .footer:hover {
+  color: #346bd5;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 95%;
+    text-align: center;
+  }
+  .sidebar .footer {
+    display: none;
+  }
+  .sidebar .sidebar-inner {
+    padding-left: 20px;
+    height: auto;
+  }
+}/*# sourceMappingURL=Sidebar.css.map */
