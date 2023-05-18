@@ -127,11 +127,15 @@
         flex-wrap: wrap;
         width: 95%;
         .card{
-            padding: 6px 10px;
-            width: 220px;
+            padding: 6px 20px;
+            width: 210px;
             border-radius: 12px;
             font-family: 'Lato';
             position: relative;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            &:hover{
+                box-shadow: none;
+            }
             p:nth-child(2){
                 font-size: 22px;
                 font-weight: 700;
