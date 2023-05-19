@@ -154,8 +154,6 @@
 /* Responsive Styles */
 
 @media (max-width: 768px) {
-
-  /* Styles for mobile devices */
   .container {
     flex-direction: column;
 
@@ -187,8 +185,6 @@
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-
-  /* Styles for tablet devices */
   .container {
     .card:last-child {
       width: 80%;

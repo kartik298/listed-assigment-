@@ -13,6 +13,7 @@
         overflow: hidden;
         padding-left: 40px;
         box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
         @keyframes blink {
             0% {
                 opacity: 1;
@@ -75,9 +76,6 @@
             transform: translateX(0);
         }
     }
-
-
-
     .top-nav p i {
         padding-right: 3px;
     }

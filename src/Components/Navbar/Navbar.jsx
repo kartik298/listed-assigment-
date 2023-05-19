@@ -34,18 +34,6 @@ const Navbar = ({ userEmail, userName, userImage, logout, saveUser, savedUsers }
           <p className="name">{userName}</p>
           <p className="email">{userEmail}</p>
           <button onClick={logout}>Logout <i class="fas fa-sign-out"></i></button>
-          
-          {/* <h5>Other Users: {savedUsers.length}</h5>
-          <div className="otherUsers">
-            {savedUsers.map((user, index) => (
-              <div key={index} className="userItem">
-                <span className="userIndex">{index + 1}.</span>
-                <img src={user.imageUrl} alt="Profile" className="userImage" />
-                <span className="userName">{user.name}</span>
-              </div>
-            ))}
-          </div> */}
-
         </div>
       )}
     </div>
