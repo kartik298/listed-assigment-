@@ -19,7 +19,9 @@ Through this project, I aimed to create a user-friendly and visually appealing d
 ## Screenshots
 
 ![Directory Structure](https://github.com/03prashantpk/listedAssignment/blob/master/public/screenshot1.JPG)
-![Project Demo](https://github.com/03prashantpk/listedAssignment/blob/master/public/screenshot1.gif.gif)
+
+
+![Project Demo](https://github.com/03prashantpk/listedAssignment/blob/master/public/screenshot2.gif.gif)
 
 ## Live Link
 
