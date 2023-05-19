@@ -12,8 +12,7 @@
         height: 89vh;
         overflow: hidden;
         padding-left: 40px;
-        box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
         @keyframes blink {
             0% {
                 opacity: 1;
@@ -45,19 +44,24 @@
             line-height: 40px;
             font-family: 'Montserrat';
         }
-        p:nth-child(1){
+
+        p:nth-child(1) {
             animation: slideFromLeftToRight 0.2s ease-in-out;
         }
-        p:nth-child(2){
+
+        p:nth-child(2) {
             animation: slideFromLeftToRight 0.4s ease-in-out;
         }
-        p:nth-child(3){
+
+        p:nth-child(3) {
             animation: slideFromLeftToRight 0.6s ease-in-out;
         }
-        p:nth-child(4){
+
+        p:nth-child(4) {
             animation: slideFromLeftToRight 0.8s ease-in-out;
         }
-        p:nth-child(5){
+
+        p:nth-child(5) {
             animation: slideFromLeftToRight 0.9s ease-in-out;
         }
     }
@@ -72,7 +76,7 @@
         }
     }
 
-    
+
 
     .top-nav p i {
         padding-right: 3px;
@@ -94,11 +98,12 @@
             animation: bottomToTop 0.6s ease-in-out;
 
         }
+
         @keyframes bottomToTop {
             0% {
                 transform: translateY(100%);
             }
-    
+
             100% {
                 transform: translateY(-100%);
             }
@@ -111,11 +116,38 @@
     }
 }
 
+@keyframes backgroundChange {
+    0% {
+        background-position: top right;
+        animation-delay: 0.6s;
+    }
+
+    25% {
+        background-position: top left;
+        animation-delay: 0.6s;
+    }
+
+    50% {
+        background-position: top center;
+        animation-delay: 0.6s;
+    }
+
+    75% {
+        background-position: right center;
+        animation-delay: 0.6s;
+    }
+
+    100% {
+        background-position: right bottom;
+        animation-delay: 0.6s;
+    }
+}
+
 @media (max-width: 768px) {
     .sidebar {
         width: 95%;
         text-align: center;
-        
+
         .footer {
             display: none;
         }
@@ -124,12 +156,8 @@
             padding-left: 20px;
             height: auto;
             position: relative;
-            .card-container{
-                width: 100%;
-                .card{
-                    width: 100%;
-                }
-            }
+            background-image: url('https://enally.in/images/new/servicesbg.png');
+            animation: backgroundChange 12s infinite ease-in-out;
         }
     }
 }

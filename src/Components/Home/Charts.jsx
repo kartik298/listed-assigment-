@@ -28,7 +28,7 @@ const Charts = () => {
               label: "Population",
               data: lineChartPopulation,
               fill: false,
-              borderColor: "#E9A0A0",
+              borderColor: "#75c9c8",
             },
           ],
         });
@@ -63,7 +63,7 @@ const Charts = () => {
           generateLabels: function (chart) {
             var data = chart.data;
             if (data.datasets.length) {
-              var labels = ['Population 1', 'Dummy Population'];
+              var labels = ['United State', 'Dummy Population'];
               return labels.map(function (label, i) {
                 var dataset = data.datasets[0];
                 if(dataset){} // no use
@@ -112,7 +112,7 @@ const Charts = () => {
       },
     },
   };
-  const randomNumber = Math.floor(Math.random() * 3) + 25;
+  const randomNumber = Math.floor(Math.random() * 3) + 27;
   
   const pieOptions = {
     plugins: {

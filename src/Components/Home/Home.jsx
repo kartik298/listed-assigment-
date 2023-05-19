@@ -58,7 +58,7 @@ const Home = ({ logout }) => {
         <Navbar saveUser={saveUser} logout={handleLogout} userEmail={userEmail} userName={userName} userImage={userImage} savedUsers={savedUsers} />
         <StatsCard/>
         <Charts />
-        <p className='credit'>Developed by Prashant Kumar - Github: https://github.com/03prashantpk</p>
+        <p className='credit'>Developed by Prashant Kumar - https://enally.in/projects/</p>
       </div>
       
     </div>
