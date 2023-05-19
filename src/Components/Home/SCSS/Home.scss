@@ -18,6 +18,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
 
         .right {
             display: flex;
@@ -75,6 +76,97 @@ body {
                 }
             }
         }
+
+        .user-details {
+            position: fixed;
+            right: 1%;
+            top: 6%;
+            z-index: 2;
+            text-align: center;
+            min-width: 180px;
+            background-color: #1C1D1F;
+            color: #fff;
+            border-radius: 22px;
+            padding: 1% 2%;
+            line-height: 10px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+            animation: popIn 0.3s ease-in-out;
+
+            button {
+                border: none;
+                background-color: #FFCE56;
+                color: #000;
+                padding: 6px 10px;
+                border-radius: 4px;
+                margin-top: 20px;
+
+                &:hover {
+                    background-color: #fff;
+                    color: #000;
+                    cursor: pointer;
+                }
+            }
+
+            h5 {
+                text-align: left;
+            }
+
+            .otherUsers {
+                margin-top: 20px;
+                line-height: 22px;
+
+                .userItem {
+                    display: flex;
+                    align-items: center;
+
+                    .userIndex {
+                        margin-right: 10px;
+                    }
+
+                    .userImage {
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 50%;
+                        margin-right: 5px;
+                    }
+
+                    .userName {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .name {
+                text-transform: capitalize;
+                font-size: 18px;
+                font-weight: 600;
+                color: #FFCE56;
+            }
+
+            .email {
+                font-size: 14px;
+                font-weight: 400;
+            }
+
+
+            img {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+            }
+        }
+
+        @keyframes popIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
     }
 
     .card-container {
@@ -93,6 +185,7 @@ body {
             position: relative;
             box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
             line-height: 12px;
+
             &:hover {
                 box-shadow: none;
             }
@@ -148,6 +241,170 @@ body {
             }
         }
     }
+
+    .Chart {
+        margin-top: 2%;
+        background-color: #fff;
+        width: 91.5%;
+        padding: 1% 2%;
+        border-radius: 22px;
+        box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+
+        .line-data {
+            height: 400px;
+
+        }
+        .head {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+
+            .left {
+                line-height: 10px;
+
+                p {
+                    font-weight: 700;
+                    font-family: 'Montserrat';
+                }
+            }
+        }
+    }
+
+    .Stats {
+        margin: 2% 0%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 95.2%;
+
+        .top-product {
+            background-color: #fff;
+            box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+            border-radius: 22px;
+            padding: 3% 2%;
+            min-width: 480px;
+        }
+
+        .Schedules {
+            min-width: 480px;
+            background-color: #fff;
+            border-radius: 22px;
+            padding: 2%;
+            box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+
+            .data1 {
+                margin: 2.5% 1%;
+                line-height: 4px;
+                border-left: #9BDD7C 4px solid;
+                padding: 1px 10px;
+
+                p:nth-child(1) {
+                    color: #666666;
+                    font-family: 'Lato';
+                    font-size: 16px;
+                }
+
+                p:nth-child(2) {
+                    color: #999999;
+                    font-family: 'Lato';
+                    font-size: 13px;
+                }
+
+                p:nth-child(3) {
+                    color: #999999;
+                    font-family: 'Lato';
+                    font-size: 12px;
+                }
+            }
+
+            .data2 {
+                margin: 2.5% 1%;
+                line-height: 4px;
+                border-left: #6972C3 4px solid;
+                padding: 1px 10px;
+
+                p:nth-child(1) {
+                    color: #666666;
+                    font-family: 'Lato';
+                    font-size: 16px;
+                }
+
+                p:nth-child(2) {
+                    color: #999999;
+                    font-family: 'Lato';
+                    font-size: 13px;
+                }
+
+                p:nth-child(3) {
+                    color: #999999;
+                    font-family: 'Lato';
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+.card,
+.Chart,
+.Stats,
+.piechart,
+.Schedules {
+    animation: popIn 0.6s ease-in-out;
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+select {
+    background-color: #fff;
+    border: none;
+    color: #858585;
+
+    &:hover {
+        color: #505050;
+        cursor: pointer;
+    }
+
+    option {
+        background-color: #242424;
+        color: #fff;
+
+        &:hover {
+            background-color: #346bd5;
+            color: #000;
+        }
+    }
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p:nth-child(1) {
+        font-weight: 700;
+        font-family: 'Montserrat';
+    }
+
+    p:nth-child(2) {
+        color: #858585;
+        font-family: 'Montserrat';
+        font-weight: 400;
+        font-size: 14px;
+    }
 }
 
 /* Responsive Code for Mobile Devices */
@@ -160,7 +417,17 @@ body {
 
     .main {
         width: 100%;
-
+        margin: 2% 4%;
+        .top-product{
+            min-width: 20%;
+        }
+        .Schedules{
+            min-width: 20%;
+        }
+        .piechart{
+            width: 50%;
+            margin: 2%;
+        }
         .navbar {
             padding: 0px 6px;
 

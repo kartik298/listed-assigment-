@@ -4,9 +4,12 @@ import usersData from '../../Data/Users.json';
 import Sidebar from '../Sidebar/Sidebar';
 import './SCSS/Home.css';
 import Navbar from '../Navbar/Navbar';
+import StatsCard from './StatsCard';
+import Charts from './Charts';
 
 const Home = ({ logout }) => {
   const [user, setUser] = useState(null);
+  const [savedUsers, setSavedUsers] = useState(usersData);
   const auth = getAuth();
 
   useEffect(() => {
@@ -39,46 +42,24 @@ const Home = ({ logout }) => {
       imageUrl: user?.photoURL,
     };
 
-    const existingUser = usersData.find((existingUser) => existingUser.id === newUser.id);
+    const existingUser = savedUsers.find((existingUser) => existingUser.id === newUser.id);
 
     if (!existingUser) {
-      usersData.push(newUser);
+      setSavedUsers((prevUsers) => [...prevUsers, newUser]);
     }
   };
+
 
   return (
     <div className='home'>
       <Sidebar />
 
       <div className="main">
-        <Navbar logout={handleLogout} userEmail={userEmail} userName={userName} userImage={userImage} />
-      
-        <div className="card-container">
-          <div className="card">
-            <p>Total Revenues</p>
-            <p>$2,129,430</p>
-            <i className="fad fa-money-bill"></i>
-          </div>
-
-          <div className="card">
-            <p>Total Transactions</p>
-            <p>1,520</p>
-            <i className="far fa-tags"></i>
-          </div>
-
-          <div className="card">
-            <p>Total Revenues</p>
-            <p>9,721</p>
-            <i className="fas fa-thumbs-up"></i>
-          </div>
-
-          <div className="card">
-            <p>Total Users</p>
-            <p>892</p>
-            <i className="far fa-user-friends"></i>
-          </div>
-        </div>
+        <Navbar saveUser={saveUser} logout={handleLogout} userEmail={userEmail} userName={userName} userImage={userImage} savedUsers={savedUsers} />
+        <StatsCard/>
+        <Charts />
       </div>
+      
     </div>
   );
 };

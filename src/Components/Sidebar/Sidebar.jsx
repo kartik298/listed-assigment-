@@ -6,7 +6,7 @@ const Sidebar = () =>{
         <>
         <div className="sidebar">
           <div className="sidebar-inner">
-            <h1>Board.</h1>
+            <h1>Board<span>.</span></h1>
 
             <ul className="top-nav">
                 <p><i class="material-icons">dashboard</i> Dashboard</p>

@@ -4,13 +4,29 @@
 }
 .sidebar .sidebar-inner {
   background-color: #000;
-  height: 93vh;
+  height: 110vh;
   color: #fff;
   border-radius: 22px;
-  padding: 4% 6%;
-  position: relative;
+  padding: 2% 6%;
+  position: fixed;
+  height: 89vh;
+  overflow: hidden;
   padding-left: 40px;
   box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.sidebar .sidebar-inner span {
+  animation: blink 1s infinite;
 }
 .sidebar .top-nav {
   margin: 0;
@@ -21,6 +37,29 @@
   color: #ffffff;
   line-height: 40px;
   font-family: "Montserrat";
+}
+.sidebar .top-nav p:nth-child(1) {
+  animation: slideFromLeftToRight 0.2s ease-in-out;
+}
+.sidebar .top-nav p:nth-child(2) {
+  animation: slideFromLeftToRight 0.4s ease-in-out;
+}
+.sidebar .top-nav p:nth-child(3) {
+  animation: slideFromLeftToRight 0.6s ease-in-out;
+}
+.sidebar .top-nav p:nth-child(4) {
+  animation: slideFromLeftToRight 0.8s ease-in-out;
+}
+.sidebar .top-nav p:nth-child(5) {
+  animation: slideFromLeftToRight 0.9s ease-in-out;
+}
+@keyframes slideFromLeftToRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 .sidebar .top-nav p i {
   padding-right: 3px;
@@ -37,6 +76,15 @@
 }
 .sidebar .footer p {
   color: #cccccc;
+  animation: bottomToTop 0.6s ease-in-out;
+}
+@keyframes bottomToTop {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
 }
 .sidebar .footer:hover {
   color: #346bd5;
@@ -54,5 +102,6 @@
   .sidebar .sidebar-inner {
     padding-left: 20px;
     height: auto;
+    position: relative;
   }
 }/*# sourceMappingURL=Sidebar.css.map */
