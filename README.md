@@ -12,9 +12,6 @@ To enhance the visual appeal of the dashboard, I incorporated some basic @keyfra
 
 One of the standout features of this project is the dynamic linear chat and pie chart, which are constructed using data fetched from the API: ![https://datausa.io/api/data?drilldowns=Nation&measures=Population](https://datausa.io/api/data?drilldowns=Nation&measures=Population).
 
-Additionally, I have implemented a logout function that allows users to easily sign out, redirecting them back to the login screen for a smooth user experience.
-
-Through this project, I aimed to create a user-friendly and visually appealing dashboard, combining the power of React.js, Google authentication, SCSS, and dynamic data visualization. I believe it provides a seamless user experience and contributes to effective data presentation and management.
 
 ## Screenshots
 
@@ -25,9 +22,11 @@ Through this project, I aimed to create a user-friendly and visually appealing d
 
 ## Live Link
 
-Project Live Link 1: [Live Demo - onrender.com](https://listedassignment.onrender.com/)
-Project Live Link 2: [Live Demo - netlify.app](https://prashant-listedassignment.netlify.app/)
-Project Live Link 3: [Live Demo - vercel.app](https://listed-assignment-navy.vercel.app/)
+- Project Live Link 1: [Live Demo - onrender.com](https://listedassignment.onrender.com/)
+
+- Project Live Link 2: [Live Demo - netlify.app](https://prashant-listedassignment.netlify.app/)
+
+- Project Live Link 3: [Live Demo - vercel.app](https://listed-assignment-navy.vercel.app/)
 
 ## Installation
 
@@ -75,6 +74,7 @@ Thank you for considering contributing to this project! Here are some basic guid
 Feel free to contact me throught the following places:
 - Linkedin: @03PrashantPK [CLick Here](linkedin.com/in/03prashantpk/)
 - Instagram: @prashantpkumar [Click Here](https://www.instagram.com/prashantpkumar/)
+
 Right Click and Open to New tab to keep exploring this project.
 
 ## Acknowledgements
