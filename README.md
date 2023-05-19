@@ -48,12 +48,15 @@ To install and run this React project, follow the steps below:
 Common issues users might encounter and their solutions are:
 
 **Issue**: API Key or Data Mismatch in Google authentication?
+
 **Solution**:  Verify the API Key configuration and data consistency.
 
 **Issue**: Application crashes/show no data when your are offline.
+
 **Solution**: Check your internet connection and try restarting the application.
 
 **Issue**: User Profile Picure do not appear.
+
 **Solution**: This usually happend due to limit exceed. Wait for sometimes or try reloading through different IP.
 
 
