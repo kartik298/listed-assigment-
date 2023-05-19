@@ -254,6 +254,7 @@ body {
             height: 400px;
 
         }
+
         .head {
             margin: 0;
             padding: 0;
@@ -285,15 +286,23 @@ body {
             box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
             border-radius: 22px;
             padding: 3% 2%;
-            min-width: 480px;
+            width: 45%;
         }
-
         .Schedules {
-            min-width: 480px;
+            width: 45%;
             background-color: #fff;
             border-radius: 22px;
             padding: 2%;
             box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+
+            .head {
+                p:nth-child(2) {
+                    &:hover {
+                        color: #1C1D1F;
+                        cursor: pointer;
+                    }
+                }
+            }
 
             .data1 {
                 margin: 2.5% 1%;
@@ -348,12 +357,17 @@ body {
     }
 }
 
-.card,
 .Chart,
 .Stats,
 .piechart,
-.Schedules {
+.Schedules,
+.credit {
     animation: popIn 0.6s ease-in-out;
+}
+.home{
+    .card{
+        animation: popIn 0.6s ease-in-out;
+    }
 }
 
 @keyframes popIn {
@@ -407,6 +421,13 @@ select {
     }
 }
 
+.credit {
+    text-align: center;
+    color: #1C1D1F;
+    opacity: 0.4;
+    font-size: 13px;
+}
+
 /* Responsive Code for Mobile Devices */
 
 @media (max-width: 768px) {
@@ -418,16 +439,26 @@ select {
     .main {
         width: 100%;
         margin: 2% 4%;
-        .top-product{
-            min-width: 20%;
+
+        .line-data {
+            margin: 1% 4%;
         }
-        .Schedules{
-            min-width: 20%;
+
+        .Stats {
+            display: block;
+            margin: 2% 3%;
+
+            .top-product {
+                width: 90%;
+                margin: 2% 0%;
+            }
+
+            .Schedules {
+                width: 90%;
+                margin: 2% 0%;
+            }
         }
-        .piechart{
-            width: 50%;
-            margin: 2%;
-        }
+
         .navbar {
             padding: 0px 6px;
 

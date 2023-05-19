@@ -35,7 +35,7 @@ const Navbar = ({ userEmail, userName, userImage, logout, saveUser, savedUsers }
           <p className="email">{userEmail}</p>
           <button onClick={logout}>Logout <i class="fas fa-sign-out"></i></button>
           
-          <h5>Other Users: {savedUsers.length}</h5>
+          {/* <h5>Other Users: {savedUsers.length}</h5>
           <div className="otherUsers">
             {savedUsers.map((user, index) => (
               <div key={index} className="userItem">
@@ -44,9 +44,8 @@ const Navbar = ({ userEmail, userName, userImage, logout, saveUser, savedUsers }
                 <span className="userName">{user.name}</span>
               </div>
             ))}
-          </div>
+          </div> */}
 
-            
         </div>
       )}
     </div>

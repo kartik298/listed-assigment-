@@ -66,6 +66,7 @@ const Charts = () => {
               var labels = ['Population 1', 'Dummy Population'];
               return labels.map(function (label, i) {
                 var dataset = data.datasets[0];
+                if(dataset){} // no use
                 return {
                   text: label,
                   fillStyle: i === 0 ? '#75c9c8' : '#E9A0A0',
@@ -111,7 +112,8 @@ const Charts = () => {
       },
     },
   };
-  const randomNumber = Math.random() * (23 - 22) + 22;
+  const randomNumber = Math.floor(Math.random() * 3) + 25;
+  
   const pieOptions = {
     plugins: {
       tooltip: {
@@ -130,7 +132,7 @@ const Charts = () => {
         position: 'right',
         labels: {
           usePointStyle: true,
-          padding: 2+randomNumber,
+          padding: randomNumber || 27,
           generateLabels: function (chart) {
             var data = chart.data;
             if (data.labels.length && data.datasets.length) {
@@ -207,7 +209,6 @@ const Charts = () => {
      
           </div>
         </div>
-
         <div className="Schedules">
           <div className="head">
             <p>Today's schedules</p>

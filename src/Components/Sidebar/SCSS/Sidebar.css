@@ -104,4 +104,10 @@
     height: auto;
     position: relative;
   }
+  .sidebar .sidebar-inner .card-container {
+    width: 100%;
+  }
+  .sidebar .sidebar-inner .card-container .card {
+    width: 100%;
+  }
 }/*# sourceMappingURL=Sidebar.css.map */

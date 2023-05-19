@@ -51,7 +51,7 @@ const Login = ({ login }) => {
               <input type='password' name='password' id='password' value='asdfghjkl' />
             </div>
             <p>Forgot Password?</p>
-            <button>Sign In</button>
+            <button type='button'>Sign In</button>
           </form>
 
           <p className='register'>

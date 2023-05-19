@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
 import { getAuth } from 'firebase/auth';
 import usersData from '../../Data/Users.json';
 import Sidebar from '../Sidebar/Sidebar';
@@ -58,6 +58,7 @@ const Home = ({ logout }) => {
         <Navbar saveUser={saveUser} logout={handleLogout} userEmail={userEmail} userName={userName} userImage={userImage} savedUsers={savedUsers} />
         <StatsCard/>
         <Charts />
+        <p className='credit'>Developed by Prashant Kumar - Github: https://github.com/03prashantpk</p>
       </div>
       
     </div>
