@@ -132,7 +132,7 @@ const Charts = () => {
         position: 'right',
         labels: {
           usePointStyle: true,
-          padding: randomNumber || 27,
+          padding: randomNumber || 26,
           generateLabels: function (chart) {
             var data = chart.data;
             if (data.labels.length && data.datasets.length) {
