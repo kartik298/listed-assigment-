@@ -54,6 +54,12 @@ const Home = ({ logout}) => {
   const userName = user?.displayName;
   const userImage = user?.photoURL;
   const copyrightYear = new Date().getFullYear();
+
+  useEffect(() => {
+    document.title = userName ? `${userName.split(' ')[0]} - Board.` : 'Dashboard - Board.';
+  }, [userName]);
+  
+
   return (
     <div className='home'>
       <Sidebar />

@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { signInWithPopup } from 'firebase/auth';
 import { auth, provider } from '../Auth';
 import { Icon } from '@iconify/react';
 import './SCSS/Login.css';
 
 const Login = ({ login }) => {
+
+  useEffect(() => {
+    document.title = "Login - Board.";
+  }, []);
+  
   const loginWithGoogle = async () => {
     try {
       const result = await signInWithPopup(auth, provider);
