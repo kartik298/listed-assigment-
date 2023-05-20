@@ -68,26 +68,18 @@ Common issues users might encounter and their solutions are:
 
 Thank you for considering contributing to this project! Here are some basic guidelines for contributing:
 
-**Bug Reports:** Submit detailed bug reports.
+- **Bug Reports:** Submit detailed bug reports.
 
-**Feature Requests:** Submit feature requests or improvement suggestions.
+- **Feature Requests:** Submit feature requests or improvement suggestions.
 
-**Pull Requests:** Fork the repository and submit a pull request.
+- **Pull Requests:** Fork the repository and submit a pull request.
 
-**Code Style:** Follow the existing code style.
+- **Code Style:** Follow the existing code style.
 
-**Testing:** Include appropriate tests.
+- **Testing:** Include appropriate tests.
 
-**Documentation:** Update project documentation if necessary.
+- **Documentation:** Update project documentation if necessary.
 
-
-## Contact
-
-Feel free to contact me throught the following places:
-- Linkedin: @03PrashantPK [CLick Here](linkedin.com/in/03prashantpk/)
-- Instagram: @prashantpkumar [Click Here](https://www.instagram.com/prashantpkumar/)
-
-Right Click and Open to New tab to keep exploring this project.
 
 ## Acknowledgements
 - This project utilizes the SCSS engine for CSS compilation.
@@ -112,16 +104,12 @@ I would like to express my gratitude to "Listed- https://listed.fans/" for provi
 > Wagerly waiting for this 😃
 
 
-<center>
-
-[Check More Project By Me](https://enally.in/projects/)
-
-</center>
-
-
 ## Authors
 
 - <img src="https://avatars.githubusercontent.com/u/43730425?v=4" width="50px">  Prashant Kumar   [Website](https://enally.in)
+
+
+[Check More Project By Me](https://enally.in/projects/)
 
 
 
