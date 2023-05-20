@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Navbar = ({ userEmail, userName, userImage, logout, saveUser, savedUsers }) => {
+const Navbar = ({ userEmail, userName, userImage, logout, maxPopulation , saveUser, savedUsers }) => {
   const [isUserDetailsVisible, setUserDetailsVisible] = useState(false);
 
   const toggleUserDetails = () => {

@@ -1,9 +1,9 @@
-const StatsCard = () =>{
+const StatsCard = ({maxPopulation}) =>{
     return(
         <div className="card-container">
           <div className="card">
             <p>Total Revenues</p>
-            <p>$2,129,430</p>
+            <p>${maxPopulation.toLocaleString()}</p>
             <i className="fad fa-money-bill"></i>
           </div>
 

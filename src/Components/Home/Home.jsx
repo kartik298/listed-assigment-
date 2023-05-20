@@ -7,10 +7,15 @@ import Navbar from '../Navbar/Navbar';
 import StatsCard from './StatsCard';
 import Charts from './Charts';
 
-const Home = ({ logout }) => {
+const Home = ({ logout}) => {
+  const [maxPopulation, setMaxPopulation] = useState(0);
   const [user, setUser] = useState(null);
   const [savedUsers, setSavedUsers] = useState(usersData);
   const auth = getAuth();
+
+  const handleMaxPopulation = (maxPopulation) => {
+    setMaxPopulation(maxPopulation);
+  };
 
   const saveUser = useCallback((user) => {
     const newUser = {
@@ -48,16 +53,20 @@ const Home = ({ logout }) => {
   const userEmail = user?.email;
   const userName = user?.displayName;
   const userImage = user?.photoURL;
-
+  const copyrightYear = new Date().getFullYear();
   return (
     <div className='home'>
       <Sidebar />
 
       <div className="main">
-        <Navbar saveUser={saveUser} logout={handleLogout} userEmail={userEmail} userName={userName} userImage={userImage} savedUsers={savedUsers} />
-        <StatsCard/>
-        <Charts />
-        <p className='credit'>Developed by Prashant Kumar - https://enally.in/projects/</p>
+        <Navbar saveUser={saveUser} logout={handleLogout} userEmail={userEmail} userName={userName} userImage={userImage} savedUsers={savedUsers}  />
+        <StatsCard maxPopulation={maxPopulation}/>
+        <Charts onMaxPopulation={handleMaxPopulation} />
+        
+        <p className='credit'><a target='_blank' rel="noreferrer" href="https://enally.in/projects/">Checkout More Projects</a> </p>
+        <p className='credit'>Similar Dashboard: <a target='_blank' rel="noreferrer" href="https://classroombucket-v1.onrender.com/">Classroom Bucket</a> - example@mail.com || password123 </p>
+        <p className='credit'>Copyright © {copyrightYear} Board.</p>
+
       </div>
     </div>
   );

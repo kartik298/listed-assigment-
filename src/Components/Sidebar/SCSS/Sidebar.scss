@@ -1,11 +1,20 @@
+// Color Variables
+$main-color: #000;
+$text-color: #fff;
+$highlight-color: #FFCE56;
+$secondary-color: #cccccc;
+
+// Font Variables
+$font-family: 'Montserrat';
+
 .sidebar {
     padding: 10px;
     width: 15%;
 
     .sidebar-inner {
-        background-color: #000;
+        background-color: $main-color;
         height: 110vh;
-        color: #fff;
+        color: $text-color;
         border-radius: 22px;
         padding: 2% 6%;
         position: fixed;
@@ -41,9 +50,9 @@
 
     .top-nav {
         p {
-            color: #ffffff;
+            color: $text-color;
             line-height: 40px;
-            font-family: 'Montserrat';
+            font-family: $font-family;
         }
 
         p:nth-child(1) {
@@ -76,12 +85,13 @@
             transform: translateX(0);
         }
     }
+
     .top-nav p i {
         padding-right: 3px;
     }
 
     .top-nav p:hover {
-        color: #346bd5;
+        color: $highlight-color;
         cursor: pointer;
     }
 
@@ -92,7 +102,7 @@
         bottom: 1%;
 
         p {
-            color: #cccccc;
+            color: $secondary-color;
             animation: bottomToTop 0.6s ease-in-out;
 
         }
@@ -108,7 +118,7 @@
         }
 
         &:hover {
-            color: #346bd5;
+            color: $highlight-color;
             cursor: pointer;
         }
     }

@@ -4,7 +4,7 @@ import { Chart as ChartJS, Title, Tooltip, LineElement, Legend, CategoryScale, L
 
 ChartJS.register(Title, Tooltip, LineElement, Legend, CategoryScale, LinearScale, PointElement, Filler, ArcElement );
 
-const Charts = () => {
+const Charts = ({onMaxPopulation }) => {
   const [lineChartData, setLineChartData] = useState(null);
   const [pieChartData, setPieChartData] = useState(null);
 
@@ -17,6 +17,10 @@ const Charts = () => {
       .then((data) => {
         const sortedData = data.data.sort((a, b) => b.Population - a.Population);
         const top5Years = sortedData.slice(0, 5);
+        const maxPopulation = top5Years[0]?.Population || 0;
+
+         // Pass the maximum population to the Home component
+         onMaxPopulation(maxPopulation);
 
         const lineChartLabels = top5Years.map((entry) => entry.Year);
         const lineChartPopulation = top5Years.map((entry) => entry.Population);
@@ -49,7 +53,7 @@ const Charts = () => {
       .catch((error) => {
         console.error("Error fetching population data:", error);
       });
-  }, []);
+  }, [onMaxPopulation]);
 
   const lineOptions = {
     maintainAspectRatio: false,
@@ -112,7 +116,7 @@ const Charts = () => {
       },
     },
   };
-  const randomNumber = Math.floor(Math.random() * 3) + 27;
+  const randomNumber = Math.floor(Math.random() * 3) + 25;
   
   const pieOptions = {
     plugins: {
@@ -132,7 +136,7 @@ const Charts = () => {
         position: 'right',
         labels: {
           usePointStyle: true,
-          padding: randomNumber || 26,
+          padding: randomNumber || 22 || 23,
           generateLabels: function (chart) {
             var data = chart.data;
             if (data.labels.length && data.datasets.length) {
