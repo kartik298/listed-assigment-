@@ -25,15 +25,15 @@ const Home = ({ logout }) => {
     });
 
     return () => unsubscribe();
-  }, [auth]);
+  }, [auth, saveUser]); 
 
   const handleLogout = () => {
     logout();
   };
 
-  const userEmail = user?.email;
-  const userName = user?.displayName;
-  const userImage = user?.photoURL;
+  const userEmail = user?.email; // checking for null or undef... value
+  const userName = user?.displayName; // checking for null or undef... value
+  const userImage = user?.photoURL;  // checking for null or undef... value
 
   const saveUser = (user) => {
     const newUser = {

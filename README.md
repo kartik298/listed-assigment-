@@ -1,4 +1,4 @@
-# Project Name
+# React Js Dashboard - Responsive
 
 ReactJs Dashboard with Google Auth Sign-in/Sign-up feature.
 
@@ -17,21 +17,25 @@ One of the standout features of this project is the dynamic linear chat and pie 
 
 ![Directory Structure](https://github.com/03prashantpk/listedAssignment/blob/master/public/screenshot1.JPG)
 
+> Directory Structure
+
 
 ![Project Demo](https://github.com/03prashantpk/listedAssignment/blob/master/public/screenshot2.gif.gif)
+
+> Project Demo
 
 ## Live Link
 
 - Project Live Link 1: [Live Demo - onrender.com](https://listedassignment.onrender.com/)
 
-- Project Live Link 2: [Live Demo - netlify.app](https://prashant-listedassignment.netlify.app/)
-
 - Project Live Link 3: [Live Demo - vercel.app](https://listed-assignment-navy.vercel.app/)
+
+- Project Live Link 2: [Live Demo - netlify.app](https://prashant-listedassignment.netlify.app/) - This may take time to update
 
 ## Installation
 
 To install and run this React project, follow the steps below:
-- git clone ![Clone Repo](https://github.com/03prashantpk/listedAssignment.git) 
+- git clone ![Clone Repo](https://github.com/03prashantpk/listedAssignment.git) `https://github.com/03prashantpk/listedAssignment.git`
 - Go to the folder and install dependencies with: `yarn install` or `npm install`
 - Run the app with `yarn start` or `npm start`
 
@@ -49,15 +53,15 @@ Common issues users might encounter and their solutions are:
 
 **Issue**: API Key or Data Mismatch in Google authentication?
 
-**Solution**:  Verify the API Key configuration and data consistency.
+- **Solution**:  Verify the API Key configuration and data consistency.
 
 **Issue**: Application crashes/show no data when your are offline.
 
-**Solution**: Check your internet connection and try restarting the application.
+- **Solution**: Check your internet connection and try restarting the application.
 
 **Issue**: User Profile Picure do not appear.
 
-**Solution**: This usually happend due to limit exceed. Wait for sometimes or try reloading through different IP.
+- **Solution**: This usually happend due to limit exceed. Wait for sometimes or try reloading through different IP.
 
 
 ## Contributing
@@ -65,10 +69,15 @@ Common issues users might encounter and their solutions are:
 Thank you for considering contributing to this project! Here are some basic guidelines for contributing:
 
 **Bug Reports:** Submit detailed bug reports.
+
 **Feature Requests:** Submit feature requests or improvement suggestions.
+
 **Pull Requests:** Fork the repository and submit a pull request.
+
 **Code Style:** Follow the existing code style.
+
 **Testing:** Include appropriate tests.
+
 **Documentation:** Update project documentation if necessary.
 
 
@@ -98,7 +107,32 @@ Thank you for your attention to detail and commitment to maintaining a bug-free 
 I would like to express my gratitude to "Listed- https://listed.fans/" for providing the opportunity to work on this project and the inspiration it has provided for its development.
 
 
-
 ## Quotes/Testimonials
 
 > Wagerly waiting for this 😃
+
+
+<center>
+
+[Check More Project By Me](https://enally.in/projects/)
+
+</center>
+
+
+## Authors
+
+- <img src="https://avatars.githubusercontent.com/u/43730425?v=4" width="50px">  Prashant Kumar   [Website](https://enally.in)
+
+
+
+
+### Contributors names and contact info
+
+-   Prashant Kumar [LinkedIn](https://www.linkedin.com/in/03prashantpk/) | [Instagram](https://instagram.com/prashantpkumar) | [Email](https://tinyurl.com/mailPK) | ![](https://komarev.com/ghpvc/?username=03prashantpk&color=red)<br>
+
+
+<a href="https://www.linkedin.com/in/03prashantpk/">
+
+![](https://github.com/03prashantpk/03prashantpk/blob/main/assets/footer2.png)
+
+</a>
