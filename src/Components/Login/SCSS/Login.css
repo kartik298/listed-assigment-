@@ -11,6 +11,7 @@
   justify-content: center;
   align-items: center;
   font-size: 42px;
+  animation: fulltohalf 0.8s 1;
 }
 @keyframes blink {
   0% {
@@ -26,12 +27,23 @@
 .container .card:first-child span {
   animation: blink 1s infinite;
 }
+@keyframes fulltohalf {
+  0% {
+    width: 100%;
+    overflow: hidden;
+    animation-delay: 0.6s;
+  }
+  100% {
+    width: 36%;
+  }
+}
 .container .card:last-child {
   width: 64%;
   background-color: #F5F5F5;
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: fulltohalfTwo 0.8s 1;
 }
 .container .card:last-child .login-container {
   white-space: nowrap;
@@ -54,6 +66,11 @@
   padding: 6px 14px;
   display: flex;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  animation: blinkButton 1s 3 1.7s forwards;
+}
+.container .card:last-child .login-container .button-group button button:nth-child(1):hover {
+  background-color: #000;
+  color: #F5F5F5;
 }
 .container .card:last-child .login-container .button-group button:hover {
   box-shadow: none;
@@ -64,6 +81,16 @@
   width: 16px;
   height: 17px;
   margin-right: 4px;
+}
+@keyframes blinkButton {
+  0% {
+    opacity: 0.6;
+    background-color: #FFCE56;
+    color: #000;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .container .card:last-child .login-container form {
   background-color: #fff;
@@ -91,6 +118,7 @@
   font-size: 14px;
   background-color: #EAEAEA;
   border: none;
+  margin: 3px 0px;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 7px 0px inset;
 }
@@ -103,7 +131,7 @@
   cursor: pointer;
 }
 .container .card:last-child .login-container form button {
-  width: 97%;
+  width: 100%;
   background-color: #000;
   border: none;
   color: #fff;
@@ -129,6 +157,20 @@
 .container .card:last-child .login-container .register span {
   color: #346BD5;
   cursor: pointer;
+}
+@keyframes fulltohalfTwo {
+  0% {
+    width: 0%;
+    display: none;
+    overflow: hidden;
+    transform: scale(0);
+    transform: translateY(-100%);
+  }
+  100% {
+    width: 64%;
+    transform: scale(1);
+    transform: translateY(0%);
+  }
 }
 
 /* Responsive Styles */

@@ -1,9 +1,10 @@
 const StatsCard = ({maxPopulation}) =>{
+  const maxPopulations = maxPopulation.toLocaleString()
     return(
         <div className="card-container">
           <div className="card">
             <p>Total Revenues</p>
-            <p>${maxPopulation.toLocaleString()}</p>
+            <p>${maxPopulations ? (maxPopulations) : maxPopulations === null ? ( "Please Wait Loading...") : ("Something... Went Wrong!")}</p>
             <i className="fad fa-money-bill"></i>
           </div>
 

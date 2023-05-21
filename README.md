@@ -30,7 +30,7 @@ One of the standout features of this project is the dynamic linear chat and pie 
 
 - Project Live Link 3: [Live Demo - vercel.app](https://listed-assignment-navy.vercel.app/)
 
-- Project Live Link 2: [Live Demo - netlify.app](https://prashant-listedassignment.netlify.app/) - This may take time to update
+- Project Live Link 2: [Live Demo - netlify.app](https://prashant-listedassignment.netlify.app/)
 
 ## Installation
 
@@ -110,8 +110,6 @@ I would like to express my gratitude to "Listed- https://listed.fans/" for provi
 
 
 [Check More Project By Me](https://enally.in/projects/)
-
-
 
 
 ### Contributors names and contact info

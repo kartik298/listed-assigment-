@@ -10,6 +10,7 @@ $color-secondary: #858585;
 $color-bg: #F5F5F5;
 $color-input-bg: #EAEAEA;
 $color-link: #999999;
+$color-highlightBtn: #FFCE56;
 
 .container {
   display: flex;
@@ -24,6 +25,7 @@ $color-link: #999999;
     justify-content: center;
     align-items: center;
     font-size: 42px;
+    animation: fulltohalf 0.8s 1;
 
     @keyframes blink {
       0% {
@@ -42,14 +44,27 @@ $color-link: #999999;
     span {
       animation: blink 1s infinite;
     }
+
   }
 
+  @keyframes fulltohalf {
+    0%{
+      width: 100%;
+      overflow: hidden;
+      animation-delay: 0.6s;
+    }
+    100%{
+      width: 36%;
+      
+    }
+  }
   .card:last-child {
     width: 64%;
     background-color: $color-bg;
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: fulltohalfTwo 0.8s 1;
 
     .login-container {
       white-space: nowrap;
@@ -58,7 +73,6 @@ $color-link: #999999;
       .button-group {
         display: flex;
         justify-content: space-between;
-
         button {
           font-family: $font-family-montserrat;
           font-style: normal;
@@ -72,7 +86,13 @@ $color-link: #999999;
           padding: 6px 14px;
           display: flex;
           box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-
+          animation: blinkButton 1s 3 1.7s forwards;
+          button:nth-child(1){
+            &:hover{
+              background-color: $color-black;
+              color: $color-bg;
+            }
+          }
           &:hover {
             box-shadow: none;
             cursor: pointer;
@@ -86,6 +106,18 @@ $color-link: #999999;
           }
         }
       }
+      
+    @keyframes blinkButton {
+      0% {
+        opacity: 0.6;
+        background-color: $color-highlightBtn;
+        color: $color-black;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
 
       form {
         background-color: $color-white;
@@ -114,6 +146,7 @@ $color-link: #999999;
             font-size: 14px;
             background-color: $color-input-bg;
             border: none;
+            margin: 3px 0px;
             border-radius: 8px;
             box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 7px 0px inset;
           }
@@ -129,7 +162,7 @@ $color-link: #999999;
         }
 
         button {
-          width: 97%;
+          width: 100%;
           background-color: $color-black;
           border: none;
           color: $color-white;
@@ -160,6 +193,20 @@ $color-link: #999999;
           cursor: pointer;
         }
       }
+    }
+  }
+  @keyframes fulltohalfTwo {
+    0%{
+      width: 0%;
+      display: none;
+      overflow: hidden;
+      transform: scale(0);
+      transform: translateY(-100%);
+    }
+    100%{
+      width: 64%;
+      transform: scale(1);
+      transform: translateY(0%);
     }
   }
 }
@@ -202,7 +249,6 @@ $color-link: #999999;
     .card:last-child {
       width: 80%;
       padding: 2%;
-
       .login-container {
         width: 60%;
 
