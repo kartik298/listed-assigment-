@@ -20,16 +20,12 @@ const App = () => {
   };
 
   const login = () => {
-    // Implement your login logic here
-    // Replace this example implementation with your own logic
     const token = 'your-authentication-token';
     localStorage.setItem('token', token);
     setLoggedIn(true);
   };
 
   const logout = () => {
-    // Implement your logout logic here
-    // Replace this example implementation with your own logic
     localStorage.removeItem('token');
     setLoggedIn(false);
   };
